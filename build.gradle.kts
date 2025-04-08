@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "xyz.lncvrt"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -37,7 +37,6 @@ tasks {
     build {
         dependsOn("shadowJar")
     }
-
 
     processResources {
         val props = mapOf("version" to version)
