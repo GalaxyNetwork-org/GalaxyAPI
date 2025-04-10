@@ -10,5 +10,9 @@ class MessageFormat {
         fun setStaffPrefix(text: String): String {
             return "<bold><gradient:#${Messages.PRIMARY_COLOR}:#${Messages.SECONDARY_COLOR}:#${Messages.PRIMARY_COLOR}>GalaxyNetwork</gradient> <gradient:green:dark_green:green>Staff Mode</gradient> <gray>»</gray></bold> $text"
         }
+
+        fun setColor(text: String): String {
+            return "<color:${Messages.SECONDARY_COLOR}>$text</color>"
+        }
     }
 }
