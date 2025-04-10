@@ -92,6 +92,7 @@ publishing {
             artifactId = rootProject.name.lowercase()
             version = rootProject.version as String?
             artifact(tasks.shadowJar)
+            artifact(sourcesJar.get())
         }
     }
 }
