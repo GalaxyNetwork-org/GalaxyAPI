@@ -3,8 +3,21 @@ package xyz.lncvrt.galaxyapi.utils
 @Suppress("unused")
 class MessageFormat {
     companion object {
+        fun name(bold: Boolean): String {
+            val name = "<gradient:#${Colors.PRIMARY}:#${Colors.SECONDARY}:#${Colors.PRIMARY}>GalaxyNetwork</gradient"
+            return if (bold) {
+                "<bold>${name}</bold>"
+            } else {
+                name
+            }
+        }
+
+        fun name() {
+            name(true)
+        }
+
         fun setPrefix(text: String): String {
-            return "<bold><gradient:#${Colors.PRIMARY}:#${Colors.SECONDARY}:#${Colors.PRIMARY}>GalaxyNetwork</gradient> <gray>»</gray></bold> $text"
+            return "<bold>${name(false)} <gray>»</gray></bold> $text"
         }
 
         fun setStaffPrefix(text: String): String {
