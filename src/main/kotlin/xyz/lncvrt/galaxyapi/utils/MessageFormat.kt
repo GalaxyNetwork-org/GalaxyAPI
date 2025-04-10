@@ -12,8 +12,8 @@ class MessageFormat {
             }
         }
 
-        fun name() {
-            name(true)
+        fun name(): String {
+            return name(true)
         }
 
         fun setPrefix(text: String): String {
