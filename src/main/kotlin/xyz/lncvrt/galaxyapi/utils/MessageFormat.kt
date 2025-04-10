@@ -25,7 +25,7 @@ class MessageFormat {
         }
 
         fun setPrimaryColor(text: String): String {
-            return "<color:#${Colors.SECONDARY}>$text</color>"
+            return "<color:#${Colors.PRIMARY}>$text</color>"
         }
 
         fun setSecondaryColor(text: String): String {
