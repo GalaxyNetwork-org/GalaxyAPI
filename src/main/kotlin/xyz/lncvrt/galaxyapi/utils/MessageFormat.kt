@@ -4,7 +4,7 @@ package xyz.lncvrt.galaxyapi.utils
 class MessageFormat {
     companion object {
         fun name(bold: Boolean): String {
-            val name = "<gradient:#${Colors.SECONDARY}:#${Colors.PRIMARY}:#${Colors.SECONDARY}>GalaxyNetwork</gradient"
+            val name = "<gradient:#${Colors.SECONDARY}:#${Colors.PRIMARY}:#${Colors.SECONDARY}>GalaxyNetwork</gradient>"
             return if (bold) {
                 "<bold>${name}</bold>"
             } else {
