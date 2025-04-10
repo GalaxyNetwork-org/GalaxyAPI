@@ -4,15 +4,19 @@ package xyz.lncvrt.galaxyapi.utils
 class MessageFormat {
     companion object {
         fun setPrefix(text: String): String {
-            return "<bold><gradient:#${Messages.PRIMARY_COLOR}:#${Messages.SECONDARY_COLOR}:#${Messages.PRIMARY_COLOR}>GalaxyNetwork</gradient> <gray>»</gray></bold> $text"
+            return "<bold><gradient:#${Colors.PRIMARY}:#${Colors.SECONDARY}:#${Colors.PRIMARY}>GalaxyNetwork</gradient> <gray>»</gray></bold> $text"
         }
 
         fun setStaffPrefix(text: String): String {
-            return "<bold><gradient:#${Messages.PRIMARY_COLOR}:#${Messages.SECONDARY_COLOR}:#${Messages.PRIMARY_COLOR}>GalaxyNetwork</gradient> <gradient:green:dark_green:green>Staff Mode</gradient> <gray>»</gray></bold> $text"
+            return "<bold><gradient:#${Colors.PRIMARY}:#${Colors.SECONDARY}:#${Colors.PRIMARY}>GalaxyNetwork</gradient> <gradient:green:dark_green:green>Staff Mode</gradient> <gray>»</gray></bold> $text"
         }
 
-        fun setColor(text: String): String {
-            return "<color:${Messages.SECONDARY_COLOR}>$text</color>"
+        fun setPrimaryColor(text: String): String {
+            return "<color:#${Colors.SECONDARY}>$text</color>"
+        }
+
+        fun setSecondaryColor(text: String): String {
+            return "<color:#${Colors.SECONDARY}>$text</color>"
         }
     }
 }
