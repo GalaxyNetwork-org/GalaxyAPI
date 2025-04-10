@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "xyz.lncvrt"
-version = "1.0.4"
+version = "1.0.5-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -28,10 +28,19 @@ kotlin {
     jvmToolchain(targetJavaVersion)
 }
 
+val sourcesJar = tasks.register<Jar>("sourcesJar") {
+    from(sourceSets.main.get().allSource)
+    archiveClassifier.set("sources")
+}
+
 tasks {
     shadowJar {
         archiveBaseName.set(rootProject.name)
         archiveClassifier.set("")
+    }
+
+    artifacts {
+        add("archives", sourcesJar)
     }
 
     build {
