@@ -1,4 +1,4 @@
 name: GalaxyAPI
 version: '${version}'
 main: xyz.lncvrt.galaxyapi.GalaxyAPI
-api-version: '1.20'
+api-version: '1.21'
